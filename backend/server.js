@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
+const chatRoutes = require('./routes/chat');
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ mongoose.connect( process.env.MONGODB_URL || '', {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/chats', chatRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
