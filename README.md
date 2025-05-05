@@ -44,7 +44,7 @@ Follow these steps to run the project locally:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/parents-chat-enhanced.git
+git clone https://github.com/Rohit-1301/Parents.chat.git
 cd parents-chat-enhanced
 ```
 
