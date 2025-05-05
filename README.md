@@ -33,7 +33,7 @@ The project is deployed live on **Render**.
 ## 🚀 Live Demo
 
 You can check out the deployed site here:
-👉 [Live on Render]([YOUR_RENDER_URL_HERE](https://parents-chat-live.onrender.com))
+👉 [Live on Render](https://parents-chat-live.onrender.com)
 
 ---
 
