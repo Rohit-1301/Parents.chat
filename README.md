@@ -107,6 +107,13 @@ npm run dev
 
 ---
 
+## ⚠ Important Note
+
+After login/signup, you need to reload the website once to see your username displayed in the header.
+This ensures the frontend picks up the updated user state correctly.
+
+Also, you can use any dummy email like ab@gmail.com, test123@example.com, etc. — you don’t need to use a real Gmail or verified email address to test the login/signup system.
+
 ## 🤝 Contributions
 
 Feel free to fork, improve, and submit a pull request!
