@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FaMicrophone, FaVolumeUp, FaComments, FaPlus, FaTrash, FaEdit, FaCheck, FaTimes } from 'react-icons/fa';
 import axios from 'axios';
 import { getParentResponse } from '../utils/chat';
+import { API_BASE_URL } from '../config';
 
 // Utility to generate a simple session ID
 function createSessionId() {
@@ -261,7 +262,7 @@ const ChatSection = () => {
   // Save a message to backend
   const saveMessage = async (msg, isUser) => {
     try {
-      await axios.post('http://localhost:5000/api/chats', {
+      await axios.post(`${API_BASE_URL}/api/chats`, {
         sessionId: activeSessionId,
         message: msg,
         isUser,
@@ -274,7 +275,7 @@ const ChatSection = () => {
   // Fetch chat history for sidebar
   const fetchChatHistory = async (sessionId = activeSessionId) => {
     try {
-      const res = await axios.get('http://localhost:5000/api/chats', {
+      const res = await axios.get(`${API_BASE_URL}/api/chats`, {
         params: { sessionId }
       });
       setChatHistory(res.data);
@@ -291,7 +292,7 @@ const ChatSection = () => {
   // Load messages for the active session
   useEffect(() => {
     const loadSession = async () => {
-      const res = await axios.get('http://localhost:5000/api/chats', {
+      const res = await axios.get(`${API_BASE_URL}/api/chats`, {
         params: { sessionId: activeSessionId }
       });
       if (res.data.length === 0) {
